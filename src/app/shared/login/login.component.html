@@ -1,0 +1,42 @@
+<form class="text-center border border-light p-5" style="background-color: white" [formGroup]="loginForm"
+      (ngSubmit)="submitForm()">
+  <p class="h4 mb-4">ĐĂNG NHẬP</p>
+
+  <!-- E-mail -->
+  <input type="text" formControlName="username" id="defaultRegisterFormEmail" class="form-control mb-4"
+         placeholder="E-mail">
+
+  <!-- Password -->
+  <input type="password" formControlName="password" id="defaultRegisterFormPassword" class="form-control"
+         placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+  <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+    Mật khẩu
+  </small>
+
+  <!-- Sign up button -->
+  <button mdbBtn color="info" block="true" class="my-4" type="submit">Sign in</button>
+  <button [mat-dialog-close]="this.userResponse" cdkFocusInitial id="closeModal"> OK</button>
+  <!-- Social register -->
+  <p>or sign up with:</p>
+
+  <a type="button" class="light-blue-text mx-2">
+    <mdb-icon fab icon="facebook"></mdb-icon>
+  </a>
+  <a type="button" class="light-blue-text mx-2">
+    <mdb-icon fab icon="twitter"></mdb-icon>
+  </a>
+  <a type="button" class="light-blue-text mx-2">
+    <mdb-icon fab icon="linkedin"></mdb-icon>
+  </a>
+  <a type="button" class="light-blue-text mx-2">
+    <mdb-icon fab icon="github"></mdb-icon>
+  </a>
+
+  <hr>
+
+  <!-- Terms of service -->
+  <p>By clicking
+    <em>Sign up</em> you agree to our
+    <a href="" target="_blank">terms of service</a></p>
+</form>
+

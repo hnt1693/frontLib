@@ -1,0 +1,25 @@
+.addIcon:hover{
+  color: deeppink;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.un {
+  display: inline-block;
+}
+
+.un::after {
+  content: '';
+  width: 0px;
+  height: 2px;
+  display: block;
+  background: blue;
+  transition: 300ms;
+}
+
+.un:hover::after {
+  width: 80%;
+  margin-left: 20%;
+  box-shadow: cornflowerblue;
+}
